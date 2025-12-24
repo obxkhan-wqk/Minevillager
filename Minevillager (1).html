@@ -1,0 +1,701 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINEVILLE HINTS - The Ultimate Guide (Light Mode, Merged)</title>
+    
+    <!-- Favicon: Using an SVG for a crisp, scalable diamond icon 💎 -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💎</text></svg>">
+
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind to use Inter font and custom colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    // Light Mode Custom Minecraft-inspired Palette
+                    colors: {
+                        'mine-primary': '#0077c9',   // Standard Bright Blue (Accent)
+                        'mine-secondary': '#28a745', // Standard Green (Economy/Success)
+                        'mine-dark': '#1e2837',      // Very Dark Navy/Charcoal (Main Text)
+                        'mine-bg': '#ffffff',        // White (Main Background)
+                        'mine-card': '#f8f8f8',      // Very Light Gray (Card Background)
+                        'mine-text': '#1e2837',      // Dark Text
+                        'mine-muted': '#6c757d',     // Muted Gray for descriptions
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Scrollbar for better aesthetics */
+        body::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background-color: #0077c9; /* mine-primary */
+            border-radius: 4px;
+        }
+        
+        /* General Card Styling */
+        .hint-card {
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: default;
+            border-left-width: 6px; /* Define a thick left border for color coding */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lighter, subtle shadow */
+        }
+        .hint-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Lighter hover shadow */
+        }
+
+        /* Specific border colors for categories - Kept bright for visibility */
+        .border-utility { border-left-color: #66ccff; } /* Bright Blue */
+        .border-city { border-left-color: #a8ff39; } /* Neon Green */
+        .border-economy { border-left-color: #ffc107; } /* Amber/Gold */
+        .border-rank { border-left-color: #e040fb; } /* Neon Purple */
+        .border-chat { border-left-color: #ff7043; } /* Bright Orange */
+        .border-mob { border-left-color: #7986cb; } /* Light Indigo */
+        .border-world { border-left-color: #26c6da; } /* Bright Cyan */
+        .border-oneblock { border-left-color: #ff5277; } /* Bright Pink */
+
+        /* Code Block Styling for Light Mode */
+        .code-block {
+            background-color: #e9ecef; /* Light gray for code block */
+            color: #343a40; /* Dark text for code */
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.75rem;
+            white-space: nowrap;
+        }
+        
+        /* Removed rank-hero, rank-paladin, etc. styles as dedicated section is gone */
+    </style>
+</head>
+<body class="bg-mine-bg font-sans text-mine-text antialiased">
+
+    <!-- Header / Navigation Bar -->
+    <header class="sticky top-0 bg-mine-bg shadow-md z-10 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row justify-between items-center">
+            <h1 class="text-3xl font-extrabold text-mine-text tracking-wider mb-2 sm:mb-0">
+                <span class="text-mine-primary">MINEVILLE</span> HINTS
+            </h1>
+            <p class="text-sm text-mine-muted font-medium">
+                Made by <span class="text-mine-text font-bold">Tea &obx</span>
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+        <!-- Introduction Block -->
+        <div class="bg-mine-card p-6 md:p-8 rounded-2xl shadow-lg mb-10 border-t-8 border-mine-primary">
+            <h2 class="text-3xl font-bold text-mine-text mb-3">Welcome, Minevillian! 💎</h2>
+            <p class="text-mine-muted leading-relaxed">
+                This guide compiles essential tips and commands for navigating the Mineville server, covering economy, ranks, city management, and custom mechanics. Use the color-coded sections below to quickly find what you need!
+            </p>
+        </div>
+        
+        <!-- ========================================================= -->
+        <!-- REVISED HINT GRID -->
+        <!-- ========================================================= -->
+
+        <!-- Hint Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Utility & General Mechanics -->
+            <div class="lg:col-span-3 mb-2">
+                <h3 class="text-2xl font-extrabold text-mine-text border-b-4 border-mine-primary/50 pb-2 mb-4">
+                    🛠️ Utility & General Mechanics (Blue)
+                </h3>
+            </div>
+
+            <!-- Tip 1: Item Collection -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-utility">
+                <h4 class="font-bold text-lg mb-2 flex items-center">Item Collection Mechanics</h4>
+                <p class="text-mine-muted">Items collect where the <span class="font-bold text-mine-primary">1st block you break/drop falls</span>. For large farm design, this is critical for efficiency. <a href="https://youtube.com/shorts/e7V4HXSsY3c?si=s6fFGy65aawxGLh4" target="_blank" class="text-mine-primary hover:underline font-medium">Video Link</a></p>
+                <!--  -->
+            </div>
+
+            <!-- Tip 2: Entity Clear -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-utility">
+                <h4 class="font-bold text-lg mb-2">Entity Clear (Despawn)</h4>
+                <p class="text-mine-muted">Mobs (if not named) and items despawn every <span class="font-bold text-mine-primary">15 minutes</span>. This includes boats and minecarts. Entity clear countdown appears in chat.</p>
+            </div>
+
+            <!-- Tip 3: Minecarts -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-utility">
+                <h4 class="font-bold text-lg mb-2">Minecart Escape (No Teleport)</h4>
+                <p class="text-mine-muted">When exiting normally, you are teleported back to your entry point. To exit without this teleport, <span class="font-bold text-mine-primary">use an enderpearl</span>.</p>
+            </div>
+
+            <!-- Tip 15: Core Mechanics Tip -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-utility">
+                <h4 class="font-bold text-lg mb-2">Core Mechanics</h4>
+                <ul class="list-disc pl-5 space-y-1 text-sm text-mine-muted">
+                    <li>Mob griefing is <span class="font-bold text-mine-primary">off</span>.</li>
+                    <li>Villagers <span class="font-bold text-mine-primary">won't eat to breed</span> (only find/turn existing ones).</li>
+                    <li>Creepers/explosions do <span class="font-bold text-mine-primary">no block damage</span>.</li>
+                </ul>
+            </div>
+
+            <!-- Tip 23: Merge Limited Use Items -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-utility">
+                <h4 class="font-bold text-lg mb-2">Merge Tools (Stack Uses)</h4>
+                <p class="text-mine-muted">Combine multiple limited-use items (Hoes, Axes, Wands, <span class="font-bold text-mine-primary">TrenchPiks</span>) into one item with more uses using: <code class="code-block">/mergetools</code>. <a href="https://youtu.be/DZjP6nBkqRY?si=NB2erWR-Z1H-Q-Nm" target="_blank" class="text-mine-primary hover:underline font-medium">Video</a></p>
+            </div>
+
+            <!-- Tip 35: Automatic Farms (Revised) -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-utility">
+                <h4 class="font-bold text-lg mb-2">Automatic Farms</h4>
+                <p class="text-mine-muted">Redstone is disabled and pistons do not push crops/items. The best fully automatic farm is **Cactus**. Pumpkins and Melons sell for more but **cannot be fully automated** (they require a Sell Wand).</p>
+            </div>
+            
+            <!-- Teleportation & Movement -->
+            <div class="lg:col-span-3 mb-2">
+                <h3 class="text-2xl font-extrabold text-mine-text border-b-4 border-mine-primary/50 pb-2 mb-4 mt-6">
+                    🚀 Teleportation & Movement (Blue)
+                </h3>
+            </div>
+
+            <!-- Tip T1: /tpa -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-utility">
+                <h4 class="font-bold text-lg mb-2">Teleport to Player</h4>
+                <p class="text-mine-muted">Use <code class="code-block">/tpa PlayerName</code> to request a teleport to another player. They must accept with <code class="code-block">/tpaccept</code>.</p>
+            </div>
+            
+            <!-- Tip T4: /tpahere -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-utility">
+                <h4 class="font-bold text-lg mb-2">Teleport Player to You</h4>
+                <p class="text-mine-muted">Use <code class="code-block">/tpahere PlayerName</code> to request a player teleport <span class="font-bold text-mine-primary">to your location</span>. They must accept with <code class="code-block">/tpaccept</code>.</p>
+            </div>
+
+            <!-- Tip T2: Globe Teleport -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-utility">
+                <h4 class="font-bold text-lg mb-2">Globe Teleport Menu</h4>
+                <p class="text-mine-muted">Access the main travel menu via your <span class="font-bold text-mine-primary">Globe item</span> (inventory) and select the <span class="font-bold text-mine-primary">Teleport</span> option to travel to warps, cities, and dimensions.</p>
+            </div>
+
+            <!-- Command Essentials -->
+            <div class="lg:col-span-3 mb-2">
+                <h3 class="text-2xl font-extrabold text-mine-text border-b-4 border-mine-primary/50 pb-2 mb-4 mt-6">
+                    ⌨️ Command Essentials (Blue)
+                </h3>
+            </div>
+            
+            <!-- NEW TIP: Demigod /fix all -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-utility">
+                <h4 class="font-bold text-lg mb-2">Demigod Utility Commands</h4>
+                <p class="text-mine-muted">Champion+ gets <code class="code-block">/fix</code> (item in hand), while **Demigod** rank gains exclusive access to <code class="code-block">/fix all</code> (repairs all inventory items) and <code class="code-block">/heal</code>.</p>
+            </div>
+            
+            <!-- NEW TIP: Champion /fix, /feed -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-utility">
+                <h4 class="font-bold text-lg mb-2">Champion Utility Commands</h4>
+                <p class="text-mine-muted">The **Champion** rank (and higher) unlocks crucial commands like <code class="code-block">/fix</code> (repair item in hand), <code class="code-block">/feed</code> (instantly restore hunger), and the ability to use utility blocks (<code class="code-block">/anvil</code>, <code class="code-block">/smithingtable</code>, etc.).</p>
+            </div>
+            
+            <!-- NEW TIP: Paladin /sellall, /hat -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-utility">
+                <h4 class="font-bold text-lg mb-2">Paladin Utility & Economy Commands</h4>
+                <p class="text-mine-muted">The **Paladin** rank (and higher) gains access to <code class="code-block">/disposal</code>, <code class="code-block">/hat</code>, <code class="code-block">/sellall</code>, and the ability to use the **Sell All** button in <code class="code-block">/shop</code>.</p>
+            </div>
+
+
+            <!-- Tip C1: Check Rank/Fly Time (Revised) -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-utility">
+                <h4 class="font-bold text-lg mb-2">Check Rank/Fly Time</h4>
+                <p class="text-muted">Use the command <code class="code-block">/rank</code> to view the time remaining on your purchased ranks. Fly time is typically shown in the **in-game scoreboard**.</p>
+            </div>
+
+            <!-- Tip C2: Starter Kit -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-utility">
+                <h4 class="font-bold text-lg mb-2">Daily Starter Kit</h4>
+                <p class="text-mine-muted">Claim basic F2P supplies every 24 hours using the command: <code class="code-block">/kit starter</code>.</p>
+            </div>
+
+
+            <!-- Farming & Resource Optimization -->
+            <div class="lg:col-span-3 mb-2">
+                <h3 class="text-2xl font-extrabold text-mine-text border-b-4 border-mine-secondary/50 pb-2 mb-4 mt-6">
+                    🌾 Farming & Optimization (Neon Green)
+                </h3>
+            </div>
+
+            <!-- Tip F1: Hoppers Limit -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-city">
+                <h4 class="font-bold text-lg mb-2">Hoppers Limit</h4>
+                <p class="text-mine-muted">You can only place a maximum of <span class="font-bold text-mine-primary">100 hoppers per city</span>. Plan your collection systems wisely!</p>
+            </div>
+
+            <!-- Tip F2: Item Frames Limit -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-city">
+                <h4 class="font-bold text-lg mb-2">Item Frame Limit</h4>
+                <p class="text-mine-muted">There is a limit of <span class="font-bold text-mine-primary">30 item frames per chunk</span>. This limit prevents lag and entity overload in large builds.</p>
+            </div>
+
+            <!-- Tip F3: Most Profitable Crops -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-city">
+                <h4 class="font-bold text-lg mb-2">Most Profitable Crops</h4>
+                <p class="text-mine-muted">The best crops for profit are <span class="font-bold text-mine-primary">Cactus</span> (easy to fully automate) and <span class="font-bold text-mine-primary">Nether Wart</span> (high selling price but requires manual harvest/sell wand).</p>
+            </div>
+
+            <!-- Tip F4: AFK Strategy -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-city">
+                <h4 class="font-bold text-lg mb-2">AFK Strategy (Gems)</h4>
+                <p class="text-mine-muted">To earn <span class="font-bold text-mine-primary">Gems</span> (for <code class="code-block">/gemshop</code> ranks/perks), use <code class="code-block">/afk</code> (1 Gem / 5 mins). If you use an AFK pool, remember the 15-minute entity clear.</p>
+            </div>
+
+            <!-- Tip F5: AFK Pond Usage -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-city">
+                <h4 class="font-bold text-lg mb-2">AFK Pond Event Usage</h4>
+                <p class="text-mine-muted">You **cannot** participate in the Pond event while in the **AFK Room** using the <code class="code-block">/afk</code> command. You **can** use the Pond event if you are AFK on your own city claim.</p>
+            </div>
+
+
+            <!-- City & Claim Management -->
+            <div class="lg:col-span-3 mb-2">
+                <h3 class="text-2xl font-extrabold text-mine-text border-b-4 border-mine-secondary/50 pb-2 mb-4 mt-6">
+                    🏠 City & Claim Management (Neon Green)
+                </h3>
+            </div>
+
+            <!-- Tip 4: Claims Expiry -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-city">
+                <h4 class="font-bold text-lg mb-2">Claims Expiry Warning</h4>
+                <p class="text-mine-muted">If you don't play for <span class="font-bold text-mine-primary">21 days</span>, all your claims will unclaim, and you lose your city. Log on periodically to prevent griefing.</p>
+            </div>
+            
+            <!-- Tip 74: Chunk Border Calculation (New Tip) -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-city">
+                <h4 class="font-bold text-lg mb-2">Chunk Border Calculation (16x16)</h4>
+                <p class="text-mine-muted">To manually find a chunk border (where a claim starts/ends): Check your X, Y, Z coordinates. If X or Z is exactly divisible by 16 (e.g., 16, 32, 48...), you are on a chunk border. Alternatively, use <code class="code-block">Globe -> City</code> to see the current chunk coordinates.</p>
+            </div>
+
+            <!-- Tip 73: DO NOT DELETE CITY -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-city">
+                <h4 class="font-bold text-lg mb-2 text-red-600">🛑 DO NOT DELETE CITY</h4>
+                <p class="text-mine-muted">Deleting your city means you lose <span class="font-bold text-mine-primary">ALL your extra claims</span> (purchased and earned). <span class="font-bold">If moving, set at least one new claim BEFORE deleting the old ones.</span></p>
+            </div>
+
+            <!-- Tip 72: Removing Annoying Visitors -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-city">
+                <h4 class="font-bold text-lg mb-2">Removing Annoying Visitors</h4>
+                <p class="text-mine-muted">Use this strict two-step process to ensure they can't return: <span class="font-bold text-mine-primary">1. <code class="code-block">/city ban PlayerName</code></span> (prevents re-entry) then <span class="font-bold text-mine-primary">2. <code class="code-block">/city kick PlayerName</code></span> (removes them immediately).</p>
+                <!--  -->
+            </div>
+
+
+            <!-- Shops & Economy -->
+            <div class="lg:col-span-3 mb-2">
+                <h3 class="text-2xl font-extrabold text-mine-text border-b-4 border-yellow-500/50 pb-2 mb-4 mt-6">
+                    💰 Shops & Economy (Gold)
+                </h3>
+            </div>
+            
+            <!-- NEW: QuickShop Command Reference -->
+            <div class="lg:col-span-3 mb-2">
+                <h3 class="text-xl font-bold text-mine-text/80 pb-2 mb-4 mt-2">
+                    📦 QuickShop Command Reference (<code class="code-block">/qs</code>)
+                </h3>
+            </div>
+
+            <!-- Tip QS: /qs create -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-economy">
+                <h4 class="font-bold text-lg mb-2"><code class="code-block">/qs create</code></h4>
+                <p class="text-mine-muted">Creates a new shop from the targeted chest. This is the first step to setting up a shop!</p>
+            </div>
+
+            <!-- Tip QS: /qs remove -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-economy">
+                <h4 class="font-bold text-lg mb-2"><code class="code-block">/qs remove</code></h4>
+                <p class="text-mine-muted">Removes the shop you are currently looking at.</p>
+            </div>
+
+            <!-- Tip QS: /qs sell -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-economy">
+                <h4 class="font-bold text-lg mb-2"><code class="code-block">/qs sell</code></h4>
+                <p class="text-mine-muted">Changes an existing shop to **SELL** mode, allowing other players to buy from you.</p>
+            </div>
+
+            <!-- Tip QS: /qs buy -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-economy">
+                <h4 class="font-bold text-lg mb-2"><code class="code-block">/qs buy</code></h4>
+                <p class="text-mine-muted">Changes an existing shop to **BUY** mode, allowing you to buy items from other players.</p>
+            </div>
+
+            <!-- Tip QS: /qs price -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-economy">
+                <h4 class="font-bold text-lg mb-2"><code class="code-block">/qs price [new price]</code></h4>
+                <p class="text-mine-muted">Changes the buy or sell price of the shop you are looking at.</p>
+            </div>
+
+            <!-- Tip QS: /qs amount -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-economy">
+                <h4 class="font-bold text-lg mb-2"><code class="code-block">/qs amount [new amount]</code></h4>
+                <p class="text-mine-muted">Allows you to set the amount of items for a transaction (useful when chat input is difficult).</p>
+            </div>
+            
+            <!-- Tip QS: /qs staff add -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-economy">
+                <h4 class="font-bold text-lg mb-2"><code class="code-block">/qs staff add [username]</code></h4>
+                <p class="text-mine-muted">Adds a player (co-op/staff) to your shop, allowing them to access the inventory of the chest shop.</p>
+            </div>
+
+            <!-- Tip QS: /qs name -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-economy">
+                <h4 class="font-bold text-lg mb-2"><code class="code-block">/qs name [new name]</code></h4>
+                <p class="text-mine-muted">Changes the name/display text of the specific shop you are looking at.</p>
+            </div>
+
+            <!-- Tip QS: /qs item -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-economy">
+                <h4 class="font-bold text-lg mb-2"><code class="code-block">/qs item</code></h4>
+                <p class="text-mine-muted">Changes the display item of the shop to the item you are currently holding.</p>
+            </div>
+
+            <!-- Tip QS: /qs suggestprice -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-economy">
+                <h4 class="font-bold text-lg mb-2"><code class="code-block">/qs suggestprice</code></h4>
+                <p class="text-mine-muted">Suggests a recommended price for the shop you are looking at, based on prices in other player shops.</p>
+            </div>
+
+            <!-- Tip QS: /qs find -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-economy">
+                <h4 class="font-bold text-lg mb-2"><code class="code-block">/qs find [item name]</code></h4>
+                <p class="text-mine-muted">Locates the nearest shop selling/buying a specific type of item.</p>
+            </div>
+
+            <!-- Tip QS: /qs fetchmessage -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-economy">
+                <h4 class="font-bold text-lg mb-2"><code class="code-block">/qs fetchmessage</code></h4>
+                <p class="text-mine-muted">Displays unread messages related to your QuickShops (e.g., successful transactions).</p>
+            </div>
+
+            <!-- Tip QS: /qs about -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-economy">
+                <h4 class="font-bold text-lg mb-2"><code class="code-block">/qs about</code></h4>
+                <p class="text-mine-muted">Shows general information about the QuickShop plugin currently running on the server.</p>
+            </div>
+
+            <!-- Tip QS: /qs help -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-economy">
+                <h4 class="font-bold text-lg mb-2"><code class="code-block">/qs help</code></h4>
+                <p class="text-mine-muted">Shows the comprehensive QuickShop help menu in-game.</p>
+            </div>
+
+
+            <!-- Existing Tip S1: Max Shops & Ranks (Updated with shop counts) -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-economy">
+                <h4 class="font-bold text-lg mb-2">Max Shops & Rank Perks</h4>
+                <p class="text-mine-muted">If you obtain a rank, <span class="font-bold text-mine-primary">set your maximum number of shops immediately</span>. You keep the higher shop count even if the rank expires! (F2P: 10 shops, Hero: 40, Paladin: 50, Champion: 75, **Demigod: 100**).</p>
+            </div>
+            
+            <!-- Tip S4: Sellable Items -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-economy">
+                <h4 class="font-bold text-lg mb-2">Sellable Items in Shops</h4>
+                <p class="text-mine-muted">You <span class="font-bold text-mine-primary">can sell Ender Chests</span> in your chest shops, which is a popular item for high-end players.</p>
+            </div>
+
+            <!-- Tip 10: Beginner Money -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-economy">
+                <h4 class="font-bold text-lg mb-2">Beginner Money Method</h4>
+                <p class="text-mine-muted">Best way: <span class="code-block">Globe - Economy - Manage Jobs</span>. Get the <span class="font-bold text-mine-primary">Digger job</span> and mine soul sand/soil. Paladin+ can join 2 jobs, Demigod+ can join 3. <a href="https://youtu.be/nu2I0bTXNTk?si=OB9pdiZ0599wmYUq" target="_blank" class="text-mine-primary hover:underline font-medium">Jobs Video</a></p>
+            </div>
+
+            <!-- Tip 41: Setting a Shop -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-economy">
+                <h4 class="font-bold text-lg mb-2">Set a Shop Quickly</h4>
+                <p class="text-mine-muted">Hold item, look at a chest, and type: <code class="code-block">/chestshop</code>. No sign needed. F2P: 10 shops. Demi: 100 shops.</p>
+            </div>
+
+            <!-- Tip 43: Jobs & CEs/Items -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-economy">
+                <h4 class="font-bold text-lg mb-2">Jobs & Custom Items</h4>
+                <p class="text-mine-muted">Limited use items (Harvester Hoe, Trench Axe) and Custom Enchants (like Timber) <span class="font-bold text-mine-primary">DO NOT give you money or XP in your job</span>. Manual harvesting is required for job pay.</p>
+            </div>
+
+            <!-- Ranks & Bundles -->
+            <div class="lg:col-span-3 mb-2">
+                <h3 class="text-2xl font-extrabold text-mine-text border-b-4 border-purple-500/50 pb-2 mb-4 mt-6">
+                    ⭐ Ranks, Bundles & Fly (Neon Purple)
+                </h3>
+            </div>
+
+            <!-- NEW TIP: Rank Overview (Combined) -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-rank lg:col-span-3">
+                <h4 class="font-bold text-xl mb-3">Complete Rank Benefits Breakdown</h4>
+                <p class="text-mine-muted mb-4">Ranks stack by duration and provide increasing access to utility commands, inventory space, and exclusive items. Use <code class="code-block">/rank</code> and <code class="code-block">/kits</code> to access your perks.</p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+                    
+                    <!-- Hero Rank -->
+                    <div class="p-3 rounded-lg border border-green-500 bg-green-50/50">
+                        <h5 class="font-extrabold text-lg text-green-700 mb-2">HERO</h5>
+                        <ul class="list-disc pl-5 space-y-1 text-mine-text/80">
+                            <li><span class="font-bold text-green-700">HERO</span> Chat Tag & Nametag</li>
+                            <li><code class="code-block">/kit Hero</code></li>
+                            <li><code class="code-block">/enderchest</code> (Virtual)</li>
+                            <li><code class="code-block">/workbench</code> Command</li>
+                            <li><code class="code-block">/Sell Hand</code> Command</li>
+                            <li><code class="code-block">/Vault</code> Command (<span class="font-bold">1 Vault</span>)</li>
+                            <li><span class="font-bold">5</span> Homes</li>
+                            <li><span class="font-bold">5</span> Auction House Slots</li>
+                            <li><span class="font-bold">40</span> Chest Shops</li>
+                            <li>Ability to <span class="font-bold">Silk Touch Spawners</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Paladin Rank -->
+                    <div class="p-3 rounded-lg border border-yellow-500 bg-yellow-50/50">
+                        <h5 class="font-extrabold text-lg text-yellow-700 mb-2">PALADIN</h5>
+                        <ul class="list-disc pl-5 space-y-1 text-mine-text/80">
+                            <li>*All perks from Hero rank AND:*</li>
+                            <li><span class="font-bold text-yellow-700">PALADIN</span> Chat Tag & Nametag</li>
+                            <li><code class="code-block">/kit Paladin</code></li>
+                            <li><code class="code-block">/disposal</code> Command</li>
+                            <li><code class="code-block">/hat</code> Command</li>
+                            <li>Ability to use the <span class="font-bold">Sell All</span> button in <code class="code-block">/shop</code></li>
+                            <li><code class="code-block">/Sell All</code> Command</li>
+                            <li>Join <span class="font-bold">2 Jobs</span> at the Same Time</li>
+                            <li><span class="font-bold">10</span> Homes</li>
+                            <li><span class="font-bold">8</span> Auction House Slots</li>
+                            <li><span class="font-bold">50</span> Chest Shops</li>
+                        </ul>
+                    </div>
+
+                    <!-- Champion Rank -->
+                    <div class="p-3 rounded-lg border border-blue-500 bg-blue-50/50">
+                        <h5 class="font-extrabold text-lg text-blue-700 mb-2">CHAMPION</h5>
+                        <ul class="list-disc pl-5 space-y-1 text-mine-text/80">
+                            <li>*All perks from Paladin rank AND:*</li>
+                            <li><span class="font-bold text-blue-700">CHAMPION</span> Chat Tag & Nametag</li>
+                            <li><code class="code-block">/kit Champion</code></li>
+                            <li>Set a custom Nickname [<code class="code-block">/nickname</code>]</li>
+                            <li><code class="code-block">/anvil</code> Command</li>
+                            <li><code class="code-block">/smithingtable</code> Command</li>
+                            <li><code class="code-block">/loom</code> Command</li>
+                            <li><code class="code-block">/fix</code> Command [Repair item in hand]</li>
+                            <li><code class="code-block">/feed</code> Command [Restore hunger instantly]</li>
+                            <li><code class="code-block">/Vault</code> Command (<span class="font-bold">5 Vaults</span>)</li>
+                            <li><span class="font-bold">15</span> Homes</li>
+                            <li><span class="font-bold">12</span> Auction House Slots</li>
+                            <li><span class="font-bold">75</span> Chest Shops</li>
+                        </ul>
+                    </div>
+
+                    <!-- Demigod Rank -->
+                    <div class="p-3 rounded-lg border border-purple-500 bg-purple-50/50">
+                        <h5 class="font-extrabold text-lg text-purple-700 mb-2">DEMIGOD</h5>
+                        <ul class="list-disc pl-5 space-y-1 text-mine-text/80">
+                            <li>*All perks from Champion rank AND:*</li>
+                            <li><span class="font-bold text-purple-700">DEMIGOD</span> Chat Tag & Nametag</li>
+                            <li><code class="code-block">/kit Demigod</code></li>
+                            <li><code class="code-block">/rename</code> Command</li>
+                            <li><code class="code-block">/nightvision</code> Command</li>
+                            <li><code class="code-block">/fix all</code> Command [Repair <span class="font-bold">all</span> items]</li>
+                            <li><code class="code-block">/heal</code> Command [Heal instantly]</li>
+                            <li><code class="code-block">/Vault</code> Command (<span class="font-bold">10 Vaults</span>)</li>
+                            <li>Join <span class="font-bold">3 Jobs</span> at the Same Time</li>
+                            <li><span class="font-bold">25</span> Homes</li>
+                            <li><span class="font-bold">20</span> Auction House Slots</li>
+                            <li><span class="font-bold">100</span> Chest Shops (Max)</li>
+                            <li><span class="font-bold">Weekly Luxury Bundle</span> [<code class="code-block">/dailyrewards</code>]</li>
+                            <li>Dark Red Chat Color</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tip 13: FREE Hero Rank -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-rank">
+                <h4 class="font-bold text-lg mb-2">FREE Hero Rank Code!</h4>
+                <p class="text-mine-muted">Use the command: <code class="code-block">/daquavis</code> to get FREE Hero Rank for a day plus the Daquavis chat title.</p>
+            </div>
+
+            <!-- Tip 18: Rank Time Stacking (Clarified) -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-rank">
+                <h4 class="font-bold text-lg mb-2">Rank Time Stacking (Clarified)</h4>
+                <p class="text-mine-muted"><span class="font-bold text-mine-primary">Purchased and daily ranks stack by duration</span>. The highest rank (e.g., Demigod) is active first, followed by the lower ranks (e.g., Hero). Use <code class="code-block">/rank</code> to check time.</p>
+            </div>
+
+            <!-- Tip 39: Fly -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-rank">
+                <h4 class="font-bold text-lg mb-2">Fly Toggle</h4>
+                <p class="text-mine-muted">Toggle fly on/off with: <code class="code-block">/fly</code>. Fly time is available through ranks or store purchases (Can buy Infinite Fly from store).</p>
+            </div>
+
+            <!-- Auctions, Enchants, & Chat -->
+            <div class="lg:col-span-3 mb-2">
+                <h3 class="text-2xl font-extrabold text-mine-text border-b-4 border-red-500/50 pb-2 mb-4 mt-6">
+                    📜 Auctions, Enchants & Chat (Bright Orange)
+                </h3>
+            </div>
+            
+            <!-- NEW TIP: Item Renaming -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-chat">
+                <h4 class="font-bold text-lg mb-2">Item Renaming & Custom Formatting (<code class="code-block">/rename</code>)</h4>
+                <p class="text-mine-muted mb-3">
+                    The <code class="code-block">/rename</code> command is unlocked by the **Demigod** rank (and higher). All color and formatting codes **MUST** be prefixed with <span class="font-bold text-mine-primary">&</span>.
+                </p>
+                
+                <p class="text-mine-muted text-sm mb-3">
+                    **Example Command:** <code class="code-block">/rename &6&L MARV MORPHBLADE</code>
+                    <br>
+                    **Glitch Text Example:** <code class="code-block">/rename &b&k GLITCH &r&5 MESSAGE &b&k GLITCH</code>
+                </p>
+
+                <h5 class="font-semibold text-mine-text text-md mb-2">Formatting Codes:</h5>
+                <div class="grid grid-cols-2 gap-x-4 text-sm text-mine-muted">
+                    <div>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li><code class="code-block">&L</code>: Large Letters (Bold)</li>
+                            <li><code class="code-block">&O</code>: Italics</li>
+                            <li><code class="code-block">&K</code>: Symbols (Glitch)</li>
+                            <li><code class="code-block">&J</code>: Symbols (Glitch)</li>
+                            <li><code class="code-block">&R</code>: Reset to Regular</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="font-semibold text-mine-text text-md mb-2">Color Codes:</h5>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li><code class="code-block">&A</code>: Lime</li>
+                            <li><code class="code-block">&B</code>: Teal</li>
+                            <li><code class="code-block">&C</code>: Pink</li>
+                            <li><code class="code-block">&D</code>: Magenta</li>
+                            <li><code class="code-block">&E</code>: Yellow</li>
+                            <li><code class="code-block">&F</code>: White</li>
+                            <li><code class="code-block">&1</code>: Navy</li>
+                            <li><code class="code-block">&2</code>: Green</li>
+                            <li><code class="code-block">&3</code>: Cyan</li>
+                            <li><code class="code-block">&4</code>: Red</li>
+                            <li><code class="code-block">&5</code>: Purple</li>
+                            <li><code class="code-block">&6</code>: Gold</li>
+                            <li><code class="code-block">&7</code>: Grey</li>
+                            <li><code class="code-block">&8</code>: Dark Grey</li>
+                            <li><code class="code-block">&9</code>: Violet</li>
+                            <li><code class="code-block">&0</code>: Black</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tip CE1: Buy Shards with XP (New Tip) -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-chat">
+                <h4 class="font-bold text-lg mb-2">Get Shards for Custom Enchants</h4>
+                <p class="text-mine-muted">You can buy <span class="font-bold text-mine-primary">Shards</span> (used to get Custom Enchants) from the Custom Enchant shop using your **XP levels**.</p>
+            </div>
+
+
+            <!-- Tip 9: AH Restrictions (Revised) -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-chat">
+                <h4 class="font-bold text-lg mb-2">AH Restrictions & Issues</h4>
+                <p class="text-mine-muted">The <span class="font-bold text-mine-primary">bid, gem functions, and auction timer DO NOT work</span> in the Auction House. Also, you <span class="font-bold text-red-600">cannot sell</span>: **Ender Chests, Shulker Boxes, Chests, Barrels, or Name Tags** in the AH.</p>
+            </div>
+
+            <!-- Tip 21: Chat Colors & Glitches -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-chat">
+                <h4 class="font-bold text-lg mb-2">Chat Colors & Glitches</h4>
+                <p class="text-mine-muted">Use color codes (like <code class="code-block">&e</code> for yellow) and the obfuscated glitch code (Ex: <code class="code-block">&e&kABC</code>) to make messages stand out. Note that the glitch codes are sometimes incomplete.</p>
+            </div>
+            
+            <!-- Tip S3: Item Linking in Chat -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-chat">
+                <h4 class="font-bold text-lg mb-2">Item Linking in Chat</h4>
+                <p class="text-mine-muted">Hold the item you want to advertise and simply type <code class="code-block">[i]</code> in the chat window to create a clickable item link for viewers.</p>
+            </div>
+
+            <!-- Tip 19: Custom Enchants -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-chat">
+                <h4 class="font-bold text-lg mb-2">Custom Enchants Doc</h4>
+                <p class="text-mine-muted">Refer to BabyShark's continually updated Google Doc for a list of CEs: <a href="https://docs.google.com/spreadsheets/u/0/d/1PNRk37OzkbNEaKeUlkSQh_xrCPAVMpBeS9MDYNy5RiU/htmlview" target="_blank" class="text-mine-primary hover:underline font-medium">CE Google Doc</a>. Use <code class="code-block">/customenchants</code> for in-game list.</p>
+            </div>
+
+            <!-- Spawners & Mobs -->
+            <div class="lg:col-span-3 mb-2">
+                <h3 class="text-2xl font-extrabold text-mine-text border-b-4 border-indigo-500/50 pb-2 mb-4 mt-6">
+                    👾 Spawners & Mobs (Light Indigo)
+                </h3>
+            </div>
+
+            <!-- Tip 29: Spawner Mobs -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-mob">
+                <h4 class="font-bold text-lg mb-2">Spawner Mobs are Passive</h4>
+                <p class="text-mine-muted">Mobs from spawners are "dumb" and <span class="font-bold text-mine-primary">won't attack you</span>. No need for a fancy grinder, just attack what spawns.</p>
+            </div>
+
+            <!-- Tip 36: Mining Spawners -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-mob">
+                <h4 class="font-bold text-lg mb-2">Mining Spawners (Ranked Perk)</h4>
+                <p class="text-mine-muted">You need a <span class="font-bold text-mine-primary">Hero Rank</span> (or higher) to mine spawners using a Silk Touch pickaxe. F2P players must ask a ranked player for help.</p>
+            </div>
+
+            <!-- Events & Dimensions -->
+            <div class="lg:col-span-3 mb-2">
+                <h3 class="text-2xl font-extrabold text-mine-text border-b-4 border-cyan-500/50 pb-2 mb-4 mt-6">
+                    🌎 Events & Dimensions (Bright Cyan)
+                </h3>
+            </div>
+            
+            <!-- Tip E1: Random Giveaways (New Tip) -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-world">
+                <h4 class="font-bold text-lg mb-2">Random Giveaways</h4>
+                <p class="text-mine-muted">Keep an eye on the in-game chat for **random staff-hosted giveaways** throughout the day. Make sure to attend them to potentially win great prizes!</p>
+            </div>
+
+
+            <!-- Tip 20: Pond Event -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-world">
+                <h4 class="font-bold text-lg mb-2">Pond Event (<code class="code-block">/warp pond</code>)</h4>
+                <p class="text-mine-muted">When fishing, <span class="font-bold text-mine-primary">catch the words jumping out of the pond</span>, don't fish normally. Happens every <span class="font-bold text-mine-primary">4 hours</span> at **1:00, 5:00, 9:00, 13:00, 17:00, 21:00 EST/EDT.**</p>
+            </div>
+
+            <!-- Tip 30: Daily Server Updates -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-world">
+                <h4 class="font-bold text-lg mb-2">Daily Server Updates (Kick Warning)</h4>
+                <p class="text-mine-muted">Earth servers update daily, usually between <span class="font-bold text-mine-primary">5:00-6:00 AM EST/EDT</span>. You are <span class="font-bold text-mine-primary">kicked if on that server</span>. TP to another location/dimension to avoid the kick.</p>
+            </div>
+
+            <!-- OneBlock Specific -->
+            <div class="lg:col-span-3 mb-2">
+                <h3 class="text-2xl font-extrabold text-mine-text border-b-4 border-pink-500/50 pb-2 mb-4 mt-6">
+                    🧱 OneBlock Specific (Bright Pink)
+                </h3>
+            </div>
+
+            <!-- Tip 37: One Block Chests -->
+            <div class="hint-card bg-mine-card p-5 rounded-xl border-oneblock">
+                <h4 class="font-bold text-lg mb-2">OneBlock Chests (Ranked Perk)</h4>
+                <p class="text-mine-muted">You need a <span class="font-bold text-mine-primary">Rank</span> to open the special phase chests and see/get the goodies inside.</p>
+            </div>
+
+        </div>
+        <!-- End of Hint Grid -->
+
+        <!-- Final Call to Action / Footer Section -->
+        <div class="mt-12 p-8 bg-mine-card rounded-xl shadow-lg border-t border-gray-100 text-center">
+            <h4 class="text-xl font-bold text-mine-text mb-4">Join the Crowdedtea Community!</h4>
+            <div class="flex flex-wrap justify-center gap-4">
+                <!-- Discord Button -->
+                <a href="https://discord.gg/sSgSWSVe" target="_blank" class="block bg-mine-secondary text-white px-8 py-3 rounded-full font-extrabold shadow-lg hover:bg-green-600 transition duration-200 transform hover:scale-105">
+                    Official Discord Link
+                </a>
+            </div>
+            
+            <p class="text-gray-500 text-sm mt-6">
+                &copy; 2024 Crowdedtea. All rights reserved. Not affiliated with the official Mineville server.
+            </p>
+        </div>
+
+    </main>
+</body>
+</html>
+
